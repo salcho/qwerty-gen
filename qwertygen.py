@@ -1,4 +1,11 @@
+#!/usr/bin/env python
 import sys
+
+if not (sys.version_info[0] >= 2 and sys.version_info[1] >= 7):
+        print "[-] Python 2.7 is required!"
+	exit()
+
+
 import os
 from optparse import OptionParser
 from random import randint
@@ -58,7 +65,7 @@ def main():
 	parser = OptionParser(usage="Usage: %prog [options] ")
 	parser.add_option("-l", "--len", dest="depth", type="int", help="Password length [default: 6]", default=6)
 	parser.add_option("-d", "--dict", dest="dict", type="string", help="Path to keyboard layout file [default: es-latin]", default='es-latin')
-	parser.add_option("-k", "--key", dest="key", type="string", help="Key execution mode. Won't generate list.", default=False)
+	parser.add_option("-k", "--key", dest="key", type="string", help="Key execution mode. Will only print info about the key.", default=False)
 	parser.add_option("-p", "--perms", dest="perm", action="store_true", help="Generate shift permutations as well", default=False)
 	parser.add_option("-v", "--verb", dest="verbose", action="store_true", help="General stats")
 	parser.add_option("-o", "--out", dest="out", type="string", help="Path to output file [default: out.txt]", default='out.txt')
@@ -72,7 +79,8 @@ def main():
 	out = options.out
 
 	if len(sys.argv) <= 1:
-		print '[*] All options are set to default'
+		print '[*] WARNING: All options are set to default'
+		print '[*] WARNING: -h/--help for usage instructions\n'
 		print '[*] Passwords will have length %d' % depth
 		print '[*] Dictionary files correspond to %s' % dict
 		print '[*] No permutations will be generated'
@@ -115,5 +123,5 @@ def main():
 	else:
 		raw_input('[*] Press any key to start...')
 		graph.generate_upto(depth, perm, out)
-	
+
 main()
