@@ -26,13 +26,19 @@ Usage
 * Requires Python 2.7!
 
   -h, --help            show this help message and exit
+  
   -l DEPTH, --len=DEPTH
                         Password length [default: 6]
+                        
   -d DICT, --dict=DICT  Path to keyboard layout file [default: es-latin]
+  
   -k KEY, --key=KEY     Key execution mode. Will only print info about the
                         key.
+                        
   -p, --perms           Generate shift permutations as well
+  
   -v, --verb            General stats
+  
   -o OUT, --out=OUT     Path to output file [default: out.txt]
   
   
