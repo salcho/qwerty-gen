@@ -7,7 +7,7 @@ Wordlist generator for apparent complex passwords
 
 Generates keyboard sequences for a given layout to be used in password cracking
 
-Developed by: salcho - salchoman@gmail.com
+Developed by: salcho - salchoman[at]gmail.com
 
 
 Features
