@@ -45,10 +45,13 @@ Usage
 Examples
 ===========
   * Generate all patterns of adjacent keys with a length of 7. Show stats and print to out_enus file
+  
         $ ./qwerty-gen -l 7 -d en-us -v -o out_enus
 
   * Generate all patterns of adjacent keys with a length of 6. Calculate shift-permutations
+   
         $ ./qwerty-gen -p -d en-us -v -o out_perms_enus
 
   * Show adjacent keys, regular and shift values for key 'f'
+  
         $ ./qwerty-gen -k f
