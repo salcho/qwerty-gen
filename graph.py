@@ -20,10 +20,8 @@ class Graph:
 			cnt[len(v)] += 1
 			
 		print "[*] Loaded graph with %d vertices (V) and %d edges (E)" % (len(self.adj_matrix), len(cnt.items()))
-		#print "[*] Vertices vs Edges: "
-		#for k,v in cnt.items():
-		#	print "\t %d  ->  %d" % (v, k)
-		
+		print "[*] Vertices vs Edges: "
+		print cnt.items()		
 
 	'''
 	Return key object given it's primary representation
